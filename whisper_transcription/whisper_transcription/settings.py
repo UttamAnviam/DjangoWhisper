@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'transcribe',
-    'corsheaders'
+    'corsheaders',
+    'WithoutChunks'
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,14 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# settings.py
+# settings.py
+
+MAX_CONCURRENT_REQUESTS = 3
+TIMEOUT_SECONDS = 300
+
+# Use the remote Redis server
+REDIS_URL = 'redis://3.29.104.42:6379/0'  # Replace localhost with your server IP
+
